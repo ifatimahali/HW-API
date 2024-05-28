@@ -8,11 +8,12 @@ const resCodes = [
 
 let images = document.body;
 resCodes.forEach(e => {
-    let divCat = document.createElement('div');  //defined div from js by create element  
-    let img = document.createElement('img'); //defined img from js by create element
-    img.src = `https://http.cat/${e}.jpg`;// change the src for img to img the cat 
-    let paragraph = document.createElement('p');  //defined paragraph from js by create element
-    paragraph.textContent = `HTTP ${e}`;       //add http in the paragraph by e-> element 
-    divCat.append(paragraph); //add the paragraph in div the cat 
-    images.append(divCat);  //add the div for images in div the cat 
+    let divCat = document.createElement('div');    
+    let img = document.createElement('img');
+    img.src = `https://http.cat/${e}.jpg`;
+    let paragraph = document.createElement('p');
+    paragraph.textContent = `HTTP ${e}`;
+    divCat.append(img);
+    divCat.append(paragraph);
+    images.append(divCat);
 });
